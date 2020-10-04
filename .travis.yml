@@ -1,0 +1,18 @@
+language: python
+python:
+  - "3.7"
+
+services:
+  - docker
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - pytest
+
+after_success:
+  - docker build -t flask_app .
+  - docker run --name flask_app -p 5000:5000 -d flask_app
+  - curl localhost:5000/users
+  - docker container rm -f flask_app
