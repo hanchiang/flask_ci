@@ -1,8 +1,9 @@
 # Installation
 
+1. Install [python 3.7](https://www.python.org/downloads/)
 1. Create your own virtual environment.
-2. Activate your virtual environment.
-3. Install the requirements in the directory: `pip install -r requirements.txt`
+1. Activate your virtual environment.
+1. Install the requirements in the directory: `pip install -r requirements.txt`
 
 # Run the app
 
@@ -22,8 +23,7 @@ Run tests: `pytest`
 
 **Test**
 
-1. Build container: `docker build -t flask_app . -f ./Dockerfile-test`
-2. Run container: `docker run --name flask_app_test flask_app_test`
+1. `pytest`
 
 # CI
 
