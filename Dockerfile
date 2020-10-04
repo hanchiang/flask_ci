@@ -9,4 +9,6 @@ COPY users.json .
 COPY app/ ./app
 COPY tests/ ./tests
 
+EXPOSE 5000
+
 CMD ["python", "./app/app.py"]
